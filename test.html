@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+const ws = new WebSocket("ws://ws.yujiri.xyz:2794");
+ws.onopen = () => ws.send("");
+ws.onmessage = e => {
+	const data = JSON.parse(e.data);
+	if (data.SetText) {
+		const [user, text] = data.SetText;
+		let textarea = document.getElementById(user);
+		if (!textarea) {
+			textarea = document.createElement('textarea');
+			document.body.appendChild(textarea);
+			textarea.id = user;
+			textarea.readOnly = true;
+		};
+		textarea.value = text;
+	} else if (data.Remove) {
+		document.getElementById(data.Remove).remove();
+	}
+}
+function updateOwn() {
+	ws.send(document.getElementById('own').value)
+}
+</script>
+</head>
+<body>
+<textarea id="own" oninput="updateOwn()"></textarea>
+</body>
+</html>
