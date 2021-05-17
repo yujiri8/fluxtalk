@@ -1,4 +1,4 @@
-Fluxtalk is this idea [a friend](https://github.com/pypypypypypypypypyp) had when we were talking about the design of chat systems. He threw out the idea of a system where you can see people's text appear in real time instead of just the "person is typing" and we agreed it could make communication easier in a couple of ways:
+Fluxtalk is this idea [a friend](https://github.com/pypypypypypypypypyp) had when we were talking about the design of chat systems. She threw out the idea of a system where you can see people's text appear in real time instead of just the "person is typing" and we agreed it could make communication easier in a couple of ways:
 
 * No ninjaing
 
